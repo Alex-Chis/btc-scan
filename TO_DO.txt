@@ -1,0 +1,7 @@
+#choose a ui
+#try to learn the coinglass api and something
+#learn to add shadcn components
+
+#links: 
+#UI: https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4f8c5873958363.5c1b49a23cdc8.png
+#shadcn: https://ui.shadcn.com/docs/installation/next
