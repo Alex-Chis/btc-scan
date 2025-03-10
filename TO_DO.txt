@@ -5,3 +5,7 @@
 #links: 
 #UI: https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4f8c5873958363.5c1b49a23cdc8.png
 #shadcn: https://ui.shadcn.com/docs/installation/next
+#Learn prisma and use it  in /api/ #DID IT
+#update api logic
+
+

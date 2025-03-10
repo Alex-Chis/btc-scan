@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Montserrat, Exo_2, Karla } from "next/font/google";
+import { Karla } from "next/font/google";
 import "./globals.css";
-
-const montserrat = Montserrat({
-  weight: ["700"],
-  subsets: ["latin"],
-});
-
-const exo_2 = Exo_2({
-  weight: ["400"],
-  subsets: ["latin"],
-});
 
 const karla = Karla({
   weight: ["400"],
@@ -29,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${montserrat.className} ${karla.className} ${exo_2.className} antialiased`}
-      >
+      <body className={`${karla.className} antialiased bg-[#0a091c]`}>
         {children}
       </body>
     </html>
