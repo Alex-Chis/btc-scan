@@ -5,7 +5,8 @@
 #links: 
 #UI: https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4f8c5873958363.5c1b49a23cdc8.png
 #shadcn: https://ui.shadcn.com/docs/installation/next
-#Learn prisma and use it  in /api/ #DID IT
-#update api logic
 
+#Trebuie sa refac api-ul sa pot adauga monede si imagini noi
+#Sa invat pupeter si sa fac o ruta pt el, poate pot ii fac un trigger odata la 12 ore sau 6 ore 
+#Cand am chef sa refac designul ( cred ca il las la capat)
 

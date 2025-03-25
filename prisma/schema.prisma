@@ -8,9 +8,19 @@ datasource db {
 }
 
 
-model day {
-  id     Int       @id
-  date   DateTime? @db.Date
-  first  String?
-  second String?
+model CryptoCoin {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+  images      Image[]
+}
+
+model Image {
+  id          String    @id @default(cuid())
+  path        String
+  description String
+  createdAt   DateTime  @default(now())
+  cryptoId    String
+  crypto      CryptoCoin @relation(fields: [cryptoId], references: [id])
 }
