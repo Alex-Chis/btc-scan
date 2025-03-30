@@ -1,32 +1,20 @@
 import prisma from "@/lib/db";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   try {
-    createCryptoEntry();
+    const coins = await prisma.cryptoCoin.findMany({
+      include: { images: true }, // Include related images for each coin
+    });
+
+    return NextResponse.json({
+      coins,
+    });
   } catch (error) {
-    console.log(error);
+    console.error(error);
+    return NextResponse.json(
+      { error: "Failed to fetch data from the database" },
+      { status: 500 }
+    );
   }
-
-  const coins = await prisma.cryptoCoin.findMany();
-  const images = await prisma.image.findMany({ include: { crypto: true } });
-  return Response.json(images);
-}
-
-async function createCryptoEntry() {
-  const crypto = await prisma.cryptoCoin.create({
-    data: {
-      name: "Bitcoin",
-      description: "King of Crypto",
-      images: {
-        create: [
-          { path: "/btc-scan/public/vercel.svg", description: "Vercel logo" },
-          {
-            path: "/btc-scan/public/next.svg",
-            description: "Next logo",
-          },
-        ],
-      },
-    },
-    include: { images: true },
-  });
 }
